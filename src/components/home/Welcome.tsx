@@ -74,7 +74,7 @@ export default function Welcome() {
                 href="/about"
                 className="inline-flex items-center text-[#f59a88] text-xs tracking-[0.2em] uppercase hover:underline underline-offset-4"
               >
-                Meet Kasey Miller
+                Meet the Team
               </Link>
             </motion.div>
           </div>

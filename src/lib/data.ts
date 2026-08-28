@@ -53,9 +53,38 @@ export const SERVICES = [
 ];
 
 export const ABOUT_CONTENT = {
-  intro: 'Inspired by the natural world, all of its diversity, and a fondness for color and curating the unexpected and unusual by turning flowers into stories, moments into memories, and ordinary spaces into experiences that surprise and enchant.',
-  body: 'Ponderosa was established in October of 2020 by Kristen Trahan and Kasey Miller. Amidst the challenges of a global pandemic, we made the decision to pursue our creative passions with renewed determination. By uniting our extensive floral knowledge, industry experience, and unique talents, we set out to create something',
-  bio: 'Both Kasey Miller and Kristen Trahan got their start in floral design at a local grocery store floral counter before branching into the wholesale industry. They combined their talents to create Ponderosa Flower Studio in Houston\'s East End — a boutique studio providing daily flower deliveries, custom weddings and event',
+  intro:
+    'Inspired by the natural world, all of its diversity, and a fondness for color and curating the unexpected and unusual by turning flowers into stories, moments into memories, and ordinary spaces into experiences that surprise and enchant.',
+  body: 'Ponderosa was established in October of 2020 by Kristen Trahan and Kasey Miller. Amidst the challenges of a global pandemic, we made the decision to pursue our creative passions with renewed determination.',
+  story:
+    'Ponderosa was established in October of 2020 by Kristen Trahan and Kasey Miller. Amidst the challenges of a global pandemic, we made the decision to pursue our creative passions with renewed determination. By uniting our extensive floral knowledge, industry experience, and unique talents, we set out to create something special. We strive to blend traditional “old school” flowers with a fresh, new age modern twist. At Ponderosa, we are dedicated to bringing both quality and creativity to every arrangement, providing beautiful blooms to celebrate all of your life\'s special moments, whether big or small.',
+};
+
+export const TEAM_MEMBERS = [
+  {
+    name: 'Kasey Miller',
+    title: 'Co-founder & Lead Designer',
+    image: '/about/kasey-miller.jpg',
+  },
+  {
+    name: 'Kristen Trahan',
+    title: 'Co-founder & Lead Designer',
+    image: '/about/kristen-trahan.jpg',
+  },
+] as const;
+
+export const STUDIO_INFO = {
+  location: 'Midtown Neighborhood',
+  city: 'Houston, Texas',
+  locationNote: 'Visits by appointment only',
+  hours: [
+    { days: 'Tuesday — Friday', time: '10:00 am — 5:00 pm' },
+    {
+      days: 'Saturday — Monday',
+      time: 'Reserved for Events & Office Hours',
+    },
+  ],
+  hoursNote: 'Hours may vary',
 };
 
 export const SERVICE_OFFERINGS = [

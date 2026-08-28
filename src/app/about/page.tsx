@@ -1,78 +1,125 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ABOUT_CONTENT, COMPANY } from '@/lib/data';
+import {
+  ABOUT_CONTENT,
+  COMPANY,
+  STUDIO_INFO,
+  TEAM_MEMBERS,
+} from '@/lib/data';
 
 export const metadata: Metadata = {
   title: `About | ${COMPANY.name}`,
   description:
-    'Meet Kasey Miller & Kristen Trahan, art floral designer and founder of Ponderosa Flower Studio Design — 13+ years crafting unforgettable floral concepts in Houston.',
+    'Meet Kasey Miller and Kristen Trahan, co-founders of Ponderosa Flower Studio — blending traditional florals with a fresh, modern twist in Houston.',
 };
 
 export default function AboutPage() {
   return (
     <>
-      <section className="relative h-64 sm:h-80 overflow-hidden">
+      <section className="relative h-64 overflow-hidden sm:h-80">
         <Image
-          src="https://thistleandgracedesign.com/wp-content/uploads/2025/10/6-scaled.jpg"
-          alt="About Ponderosa Flower Studio Design"
+          src="/about/hero.jpg"
+          alt="Ponderosa Flower Studio"
           fill
           priority
           className="object-cover object-center"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/65" />
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6 pt-20">
-          <p className="text-[#f59a88] text-[10px] tracking-[0.4em] uppercase mb-4">
-            Our Story
+        <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 pt-20 text-center">
+          <p className="mb-4 text-[10px] tracking-[0.4em] text-[#f59a88] uppercase">
+            Ponderosa&apos;s Story
           </p>
-          <h1 className="font-serif text-white text-5xl sm:text-6xl">About</h1>
+          <h1 className="font-serif text-5xl text-white sm:text-6xl">About</h1>
         </div>
       </section>
 
-      <section className="py-20 px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-3 gap-16 items-center">
-          {/* Image: 1/3 column on large screens */}
-          <div className="relative aspect-square w-48 sm:w-64 mx-auto lg:mx-0 overflow-hidden lg:col-span-1">
-            <Image
-              src="/about-steve.png"
-              alt={`${COMPANY.founder}, ${COMPANY.founderTitle}`}
-              fill
-              className="object-cover object-top"
-              sizes="(max-width: 1024px) 48vw, 256px"
-            />
+      <section className="mx-auto max-w-4xl px-6 py-20 lg:px-8">
+        <blockquote className="border-l-2 border-[#f59a88]/40 pl-6">
+          <p className="font-serif text-xl leading-relaxed text-foreground/80 italic sm:text-2xl">
+            {ABOUT_CONTENT.story}
+          </p>
+        </blockquote>
+      </section>
+
+      <section className="bg-[#0e0c08] px-6 py-20 lg:px-8">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="mb-16 text-center font-serif text-4xl text-white sm:text-5xl">
+            Meet the Team
+          </h2>
+
+          <div className="grid gap-16 md:grid-cols-2 md:gap-12">
+            {TEAM_MEMBERS.map((member) => (
+              <article key={member.name} className="flex flex-col items-center text-center">
+                <div className="relative mb-8 aspect-3/4 w-full max-w-sm overflow-hidden">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 768px) 100vw, 384px"
+                  />
+                </div>
+                <h3 className="font-serif text-3xl text-white italic sm:text-4xl">
+                  {member.name}
+                </h3>
+                <p className="mt-3 text-sm tracking-[0.15em] text-[#f59a88] uppercase">
+                  {member.title}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
+        <div className="grid gap-12 md:grid-cols-3">
+          <div>
+            <p className="mb-4 text-[10px] tracking-[0.35em] text-[#f59a88] uppercase">
+              Studio Location
+            </p>
+            <p className="font-serif text-2xl text-foreground">
+              {STUDIO_INFO.location}
+            </p>
+            <p className="mt-1 text-foreground/70">{STUDIO_INFO.city}</p>
+            <p className="mt-3 text-sm text-foreground/50 italic">
+              ({STUDIO_INFO.locationNote})
+            </p>
           </div>
 
-          {/* Content: 2/3 columns on large screens */}
-          <div className="flex flex-col gap-6 lg:col-span-2">
-            <div>
-              <p className="text-[#f59a88] text-[10px] tracking-[0.35em] uppercase mb-4">
-                Principal Designer
-              </p>
-              <h2 className="font-serif text-foreground text-4xl sm:text-5xl leading-tight">
-                {COMPANY.founder}
-              </h2>
-              <p className="text-[#f59a88] text-sm tracking-[0.15em] uppercase mt-2">
-                {COMPANY.founderTitle}
-              </p>
+          <div>
+            <p className="mb-4 text-[10px] tracking-[0.35em] text-[#f59a88] uppercase">
+              Studio Hours
+            </p>
+            <div className="space-y-4">
+              {STUDIO_INFO.hours.map((slot) => (
+                <div key={slot.days}>
+                  <p className="font-serif text-xl text-foreground">{slot.days}</p>
+                  <p className="mt-1 text-foreground/70">{slot.time}</p>
+                </div>
+              ))}
             </div>
-
-            <p className="text-foreground/65 leading-relaxed text-base sm:text-lg">
-              {ABOUT_CONTENT.intro}
+            <p className="mt-4 text-sm text-foreground/50 italic">
+              ({STUDIO_INFO.hoursNote})
             </p>
+          </div>
 
-            <p className="text-foreground/65 leading-relaxed text-base sm:text-lg">
-              {ABOUT_CONTENT.body}
+          <div>
+            <p className="mb-4 text-[10px] tracking-[0.35em] text-[#f59a88] uppercase">
+              Contact
             </p>
-
-            <p className="text-foreground/65 leading-relaxed text-base sm:text-lg">
-              {ABOUT_CONTENT.bio}
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <p className="font-serif text-2xl text-foreground">{COMPANY.name}</p>
+            <a
+              href={`mailto:${COMPANY.email}`}
+              className="mt-3 inline-block text-foreground/70 transition-colors hover:text-[#f59a88]"
+            >
+              {COMPANY.email}
+            </a>
+            <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/contact"
-                className="inline-flex justify-center px-8 py-3.5 bg-[#f59a88] text-black text-xs tracking-[0.2em] uppercase font-medium hover:bg-[#ffb3a1] transition-colors duration-200"
+                className="inline-flex justify-center bg-[#f59a88] px-8 py-3.5 text-xs font-medium tracking-[0.2em] text-black uppercase transition-colors duration-200 hover:bg-[#ffb3a1]"
               >
                 Get in Touch
               </Link>
@@ -80,32 +127,12 @@ export default function AboutPage() {
                 href={COMPANY.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex justify-center px-8 py-3.5 border border-border text-foreground text-xs tracking-[0.2em] uppercase hover:border-[#f59a88] hover:text-[#f59a88] transition-all duration-200"
+                className="inline-flex justify-center border border-border px-8 py-3.5 text-xs tracking-[0.2em] text-foreground uppercase transition-all duration-200 hover:border-[#f59a88] hover:text-[#f59a88]"
               >
-                Follow Me
+                Follow Us
               </a>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="py-20 px-6 lg:px-8 bg-[#0e0c08]">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-[#f59a88] text-[10px] tracking-[0.35em] uppercase mb-4">
-            Visit Our Showroom
-          </p>
-          <h2 className="font-serif text-white text-3xl sm:text-4xl mb-6">
-            Experience T&G Design in Person
-          </h2>
-          <p className="text-white/60 leading-relaxed mb-8">
-            Stop by our Houston studio to explore floral concepts, rental
-            pieces, and design inspiration for your upcoming celebration.
-          </p>
-          <p className="text-white/80 text-sm">
-            {COMPANY.address}
-            <br />
-            {COMPANY.city}
-          </p>
         </div>
       </section>
     </>
