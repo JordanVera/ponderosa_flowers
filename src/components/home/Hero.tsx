@@ -132,7 +132,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-6 text-xs tracking-[0.4em] text-[#B3B727] uppercase"
+          className="mb-6 text-xs tracking-[0.4em] text-[#f59a88] uppercase"
         >
           Art Floral Design · Houston
         </motion.p>
@@ -143,7 +143,7 @@ export default function Hero() {
           transition={{ duration: 0.9, delay: 0.35 }}
           className="max-w-4xl font-serif text-5xl leading-[1.05] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl"
         >
-          Where Design Meets <em className="italic text-[#B3B727]">Beauty</em>
+          Where Design Meets <em className="italic text-[#f59a88]">Beauty</em>
         </motion.h1>
 
         <motion.p
@@ -165,13 +165,13 @@ export default function Hero() {
         >
           <Link
             href="/contact"
-            className="bg-[#B3B727] px-8 py-3.5 text-xs font-medium tracking-[0.2em] text-black uppercase transition-colors duration-200 hover:bg-[#c6c95d]"
+            className="bg-[#f59a88] px-8 py-3.5 text-xs font-medium tracking-[0.2em] text-black uppercase transition-colors duration-200 hover:bg-[#ffb3a1]"
           >
             Get in Touch
           </Link>
           <Link
             href="/portfolio"
-            className="border border-white/50 px-8 py-3.5 text-xs tracking-[0.2em] text-white uppercase transition-all duration-200 hover:border-[#B3B727] hover:text-[#B3B727]"
+            className="border border-white/50 px-8 py-3.5 text-xs tracking-[0.2em] text-white uppercase transition-all duration-200 hover:border-[#f59a88] hover:text-[#f59a88]"
           >
             View Portfolio
           </Link>

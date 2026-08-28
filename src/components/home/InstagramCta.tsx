@@ -14,8 +14,8 @@ export default function InstagramCta() {
           viewport={{ once: true }}
           className="flex flex-col items-center gap-6"
         >
-          <Camera size={28} className="text-[#B3B727]" strokeWidth={1.5} />
-          <p className="text-[#B3B727] text-[10px] tracking-[0.4em] uppercase">
+          <Camera size={28} className="text-[#f59a88]" strokeWidth={1.5} />
+          <p className="text-[#f59a88] text-[10px] tracking-[0.4em] uppercase">
             Follow Our Latest Work
           </p>
           <h2 className="font-serif text-white text-3xl sm:text-4xl">
@@ -29,7 +29,7 @@ export default function InstagramCta() {
             href={COMPANY.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-3.5 border border-[#B3B727] text-[#B3B727] text-xs tracking-[0.2em] uppercase hover:bg-[#B3B727] hover:text-black transition-all duration-200"
+            className="inline-flex items-center gap-2 px-8 py-3.5 border border-[#f59a88] text-[#f59a88] text-xs tracking-[0.2em] uppercase hover:bg-[#f59a88] hover:text-black transition-all duration-200"
           >
             <Camera size={14} />
             Follow on Instagram

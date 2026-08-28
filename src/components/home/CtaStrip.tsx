@@ -18,7 +18,7 @@ export default function CtaStrip() {
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/55" />
-        <div className="absolute inset-0 bg-linear-to-r from-[#B3B727]/25 via-transparent to-[#B3B727]/20" />
+        <div className="absolute inset-0 bg-linear-to-r from-[#f59a88]/25 via-transparent to-[#f59a88]/20" />
       </div>
 
       <div className="relative mx-auto max-w-4xl text-center">
@@ -26,7 +26,7 @@ export default function CtaStrip() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-4 text-[10px] tracking-[0.4em] text-[#B3B727] uppercase"
+          className="mb-4 text-[10px] tracking-[0.4em] text-[#f59a88] uppercase"
         >
           Ready to Begin
         </motion.p>
@@ -39,7 +39,7 @@ export default function CtaStrip() {
           className="mb-6 font-serif text-4xl leading-tight text-white sm:text-5xl md:text-6xl"
         >
           Let&apos;s Design Your{' '}
-          <em className="italic text-[#B3B727]">Perfect Event</em>
+          <em className="italic text-[#f59a88]">Perfect Event</em>
         </motion.h2>
 
         <motion.p
@@ -62,13 +62,13 @@ export default function CtaStrip() {
         >
           <Link
             href="/contact"
-            className="bg-[#B3B727] px-8 py-3.5 text-xs tracking-[0.2em] text-black uppercase transition-colors duration-200 hover:bg-[#c6c95d]"
+            className="bg-[#f59a88] px-8 py-3.5 text-xs tracking-[0.2em] text-black uppercase transition-colors duration-200 hover:bg-[#ffb3a1]"
           >
             Get in Touch
           </Link>
           <a
             href={`tel:${COMPANY.phoneHref}`}
-            className="inline-flex items-center justify-center gap-2 border border-white/40 px-8 py-3.5 text-xs tracking-[0.2em] text-white uppercase transition-colors duration-200 hover:border-[#B3B727] hover:text-[#B3B727]"
+            className="inline-flex items-center justify-center gap-2 border border-white/40 px-8 py-3.5 text-xs tracking-[0.2em] text-white uppercase transition-colors duration-200 hover:border-[#f59a88] hover:text-[#f59a88]"
           >
             <Phone size={13} />
             {COMPANY.phone}

@@ -87,16 +87,16 @@ export const HERO_IMAGES = [
     alt: 'Ponderosa Flower Studio — Floral Details',
   },
   {
+    src: '/portfolio/installations/01.jpg',
+    alt: 'Ponderosa Flower Studio — Installations',
+  },
+  {
     src: '/portfolio/events/01.jpg',
     alt: 'Ponderosa Flower Studio — Events & Celebrations',
   },
   {
     src: '/portfolio/weddings/01.jpg',
     alt: 'Ponderosa Flower Studio — Wedding Florals',
-  },
-  {
-    src: '/portfolio/installations/01.jpg',
-    alt: 'Ponderosa Flower Studio — Installations',
   },
 ] as const;
 

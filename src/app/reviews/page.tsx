@@ -52,7 +52,7 @@ function StarRating({ rating }: { rating: number }) {
           size={16}
           className={
             index < rating
-              ? 'fill-[#B3B727] text-[#B3B727]'
+              ? 'fill-[#f59a88] text-[#f59a88]'
               : 'fill-transparent text-white/20'
           }
         />
@@ -80,7 +80,7 @@ export default function ReviewsPage() {
         />
         <div className="absolute inset-0 bg-black/65" />
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-6 pt-20 text-center">
-          <p className="mb-4 text-[10px] tracking-[0.4em] text-[#B3B727] uppercase">
+          <p className="mb-4 text-[10px] tracking-[0.4em] text-[#f59a88] uppercase">
             Client Love
           </p>
           <h1 className="font-serif text-5xl text-white sm:text-6xl">Reviews</h1>
@@ -107,7 +107,7 @@ export default function ReviewsPage() {
             href={GOOGLE_REVIEWS.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 bg-[#B3B727] px-8 py-3.5 text-xs tracking-[0.2em] text-black uppercase transition-colors duration-200 hover:bg-[#c6c95d]"
+            className="mt-8 inline-flex items-center gap-2 bg-[#f59a88] px-8 py-3.5 text-xs tracking-[0.2em] text-black uppercase transition-colors duration-200 hover:bg-[#ffb3a1]"
           >
             Read All Reviews on Google
             <ExternalLink size={14} />
@@ -136,8 +136,8 @@ export default function ReviewsPage() {
           ))}
         </div>
 
-        <div className="mt-16 border border-[#B3B727]/30 bg-[#0e0c08] p-8 text-center sm:p-12">
-          <p className="text-[10px] tracking-[0.35em] text-[#B3B727] uppercase">
+        <div className="mt-16 border border-[#f59a88]/30 bg-[#0e0c08] p-8 text-center sm:p-12">
+          <p className="text-[10px] tracking-[0.35em] text-[#f59a88] uppercase">
             Share Your Experience
           </p>
           <h2 className="mt-4 font-serif text-3xl text-white sm:text-4xl">
@@ -151,7 +151,7 @@ export default function ReviewsPage() {
             href={GOOGLE_REVIEWS.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 border border-white/30 px-8 py-3.5 text-xs tracking-[0.2em] text-white uppercase transition-colors duration-200 hover:border-[#B3B727] hover:text-[#B3B727]"
+            className="mt-8 inline-flex items-center gap-2 border border-white/30 px-8 py-3.5 text-xs tracking-[0.2em] text-white uppercase transition-colors duration-200 hover:border-[#f59a88] hover:text-[#f59a88]"
           >
             Leave a Google Review
             <ExternalLink size={14} />
