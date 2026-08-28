@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   description:
     "Ponderosa Flower Studio is a full-service Houston florist and floral studio in Houston, TX — specializing in wedding florals, event rentals, and corporate celebrations.",
   keywords:
-    "floral design Houston, wedding florist Houston, event rentals Houston, Thistle and Grace Design, Kasey Miller & Kristen Trahan florist",
+    "floral design Houston, wedding florist Houston, event rentals Houston, Ponderosa Flower Studio, Kasey Miller & Kristen Trahan florist",
   openGraph: {
     title: `Ponderosa Flower Studio — Houston Floral Design`,
     description:

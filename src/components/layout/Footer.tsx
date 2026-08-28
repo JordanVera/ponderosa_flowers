@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <Link href="/" className="flex items-center gap-3">
               <Image
-                src="/logo-light.png"
+                src="/logo-main.png"
                 alt={COMPANY.name}
                 width={140}
                 height={86}

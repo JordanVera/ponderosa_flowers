@@ -45,11 +45,11 @@ export default function Navbar() {
       >
         <Link href="/" className="flex shrink-0 items-center gap-2 pl-1">
           <Image
-            src="/logo-light.png"
+            src="/logo-main.png"
             alt={COMPANY.name}
             width={140}
             height={86}
-            className="h-10 w-auto sm:h-18"
+            className="h-10 w-auto sm:h-12"
             priority
           />
         </Link>
@@ -91,13 +91,13 @@ export default function Navbar() {
             iconSize={18}
             linkClassName="text-white/70 hover:text-[#f59a88]"
           />
-          <a
+          {/* <a
             href={`tel:${COMPANY.phoneHref}`}
             className="hidden items-center gap-2 rounded-full px-3 py-2 text-[#f59a88] text-xs tracking-wide transition-colors hover:text-[#ffb3a1] xl:flex"
           >
             <Phone size={14} />
             {COMPANY.phone}
-          </a>
+          </a> */}
           <Link
             href="/contact"
             className="hidden items-center rounded-full border border-[#f59a88] px-3.5 py-1.5 text-[10px] tracking-[0.2em] uppercase text-[#f59a88] transition-all duration-200 hover:bg-[#f59a88] hover:text-black sm:inline-flex"

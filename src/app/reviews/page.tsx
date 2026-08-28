@@ -21,7 +21,7 @@ const jsonLd = {
     streetAddress: COMPANY.address,
     addressLocality: 'Houston',
     addressRegion: 'TX',
-    postalCode: '77092',
+    postalCode: '77004',
   },
   aggregateRating: {
     '@type': 'AggregateRating',
@@ -71,8 +71,8 @@ export default function ReviewsPage() {
 
       <section className="relative h-64 overflow-hidden sm:h-80">
         <Image
-          src="https://thistleandgracedesign.com/wp-content/uploads/2025/10/6-scaled.jpg"
-          alt="Floral design by Ponderosa Flower Studio"
+          src="/portfolio/events/01.jpg"
+          alt={`Floral design by ${COMPANY.name}`}
           fill
           priority
           className="object-cover object-center"
@@ -99,8 +99,8 @@ export default function ReviewsPage() {
             </p>
           </div>
           <p className="leading-relaxed text-foreground/60">
-            Couples, families, and event planners across Greater Houston trust
-            Steve and the Thistle &amp; Grace team to bring their celebrations
+            Couples, families, and event planners across Greater Houston trust{' '}
+            {COMPANY.founder} and the Ponderosa team to bring their celebrations
             to life. Here is what clients are saying on Google.
           </p>
           <a
